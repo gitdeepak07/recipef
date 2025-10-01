@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorites - Online Recipe Book</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/fav.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo"><img src="https://img.icons8.com/ios-filled/100/ff7043/chef-hat.png" alt="Logo"></div>
+        <div class="nav-links">
+            <div class="nav-item" onclick="window.location.href='index.html'">🏠</div>
+            <div class="nav-item" onclick="window.location.href='addrecipe.html'">➕</div>
+            <div class="nav-item active">⭐</div>
+        </div>
+        <div class="profile"><img src="https://www.teamphenomenalhope.org/wp-content/uploads/2016/01/man-daydreaming-1-520x520.jpg" alt="Profile"></div>
+    </div>
+
+    <main>
+        <header><i class="fas fa-star"></i> Your Favorite Recipes</header>
+        
+        <div class="favorites-grid" id="favoritesGrid">
+            </div>
+        
+        <div class="empty-state" id="emptyState" style="display: none;">
+            <i class="far fa-star"></i>
+            <h3>No favorites yet</h3>
+            <p>Start adding recipes to your favorites to see them here!</p>
+        </div>
+    </main>
+
+    <script src="js/fav.js"></script>
+</body>
+</html>

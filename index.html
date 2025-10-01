@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Recipe Book</title>
+    <link rel="stylesheet" href="css/recipe.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="https://img.icons8.com/ios-filled/100/ff7043/chef-hat.png" alt="Logo">
+        </div>
+        <div class="nav-links">
+            <div class="nav-item" data-label="Home" onclick="window.location.href='recipe.html'">🏠</div>
+            <div class="nav-item" data-label="Add Recipe" onclick="window.location.href='addrecipe.html'">➕</div>
+            <div class="nav-item" data-label="Favorites" onclick="window.location.href='fav.html'">⭐</div>
+        </div>
+        <div class="profile">
+            <img src="https://www.teamphenomenalhope.org/wp-content/uploads/2016/01/man-daydreaming-1-520x520.jpg"
+                alt="Profile">
+        </div>
+    </div>
+
+
+    <main>
+        <header> 🍲 Online Recipe Book</header>
+        <div class="grid" id="recipeGrid"></div>
+    </main>
+
+
+<div class="modal" id="recipeModal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+        <img id="modalImg" src="" alt="Recipe">
+        <div class="modal-body">
+            <h2 id="modalTitle"></h2>
+            
+            <div id="modalDetails"></div>
+            
+            <button id="favoriteBtn" class="favorite-btn">⭐ Add to Favorites</button>
+            
+            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;">
+
+            <div class="rating-section">
+                <div class="stars-rating" id="userRatingStars">
+                    <span data-value="1">★</span><span data-value="2">★</span><span data-value="3">★</span><span data-value="4">★</span><span data-value="5">★</span>
+                </div>
+                <span id="avgRatingText">(0 ratings)</span>
+            </div>
+
+            <div class="comments">
+                <textarea id="commentInput" class="comment-box" placeholder="Share your review..."></textarea>
+                <button id="postCommentBtn" class="action-btn">Post Review</button>
+                
+                <h3 class="modal-section-title" style="margin-top: 25px;">Reviews</h3>
+                <ul id="commentList" class="comment-list">
+                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="js/recipe.js"></script>
+</body>
+
+</html>
